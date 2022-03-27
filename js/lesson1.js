@@ -200,11 +200,26 @@
 // console.log(9007199254740991999)
 // console.log(typeof 9007199254740991999)
 // console.log(typeof 9007199254740991999n)
+// console.log(typeof 33.4)
+
 
 // console.log(9007199254740991999n - 12312312312n)
 // console.log(10n-4) Error
 
-console.log(parseInt(5n) + 1)
-console.log(5n + BigInt(1))
+// console.log(parseInt(5n) + 1)
+// console.log(5n + BigInt(1))
+
+// 12. Math
+
+// console.log(Math.E)
+// console.log(Math.PI)
+// console.log(Math.sqrt(25))
+// console.log(Math.abs(-42))
+// console.log(Math.pow(25,0.5))
+
+// console.log(Math.max(1,2,3,77,-2))
+// console.log(Math.floor(3.9))
+// console.log(Math.ceil(3.2))
+// console.log(Math.round(3.7))
 
 
