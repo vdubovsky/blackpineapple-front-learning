@@ -222,4 +222,64 @@
 // console.log(Math.ceil(3.2))
 // console.log(Math.round(3.7))
 
+// 13. String
+
+// const name = 'Vova'
+// const age = 32
+
+// function getAge(){
+//    return age
+// }
+
+// const output = 'Hello, my name is ' + name + ', my age is ' + age
+// const coolOutput = `Hello, my name is ${name}, my age is ${getAge()}`
+// const superCoolOutput = `Hello, my name is ${name}, ${getAge() > 30 ? 'I am older than 30' : 'I am younger than 30'}`
+
+// console.log(output)
+// console.log(coolOutput)
+// console.log(superCoolOutput)
+
+// const stringName = new String('Vova')
+// console.log(stringName)
+// console.log(name.length)
+
+// console.log(name.toUpperCase())
+// console.log(name.toLowerCase())
+// console.log(name.charAt(2))
+// console.log(name.indexOf('ov'))
+// console.log(name.startsWith('V'))
+// console.log(name.endsWith('!'))
+// console.log(name.repeat(6))
+
+// const stringWithSpaces = '      password       '
+// console.log(stringWithSpaces.trim())
+// console.log(stringWithSpaces.trimLeft())
+// console.log(stringWithSpaces.trimRight())
+
+// 14. New sintaxis
+
+function newSintax(s, name, age){
+	console.log(s)
+	console.log(name)
+	console.log(age)
+}
+
+const name = 'Vova'
+const age = 32
+
+newSintax`Hello, my name is ${name}, I am ${age} years old`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
