@@ -46,11 +46,11 @@
 // let b = 26
 // let c = true
 
-// console.log(typeof a)
-// console.log(typeof b)
-// console.log(typeof c)
-// console.log(typeof undefined)
-// console.log(typeof null)
+// console.log(typeof a) // string
+// console.log(typeof b) // number
+// console.log(typeof c) // boolean
+// console.log(typeof undefined) // indefined
+// console.log(typeof null) // object
 
 // 4. Condition
 
@@ -67,14 +67,14 @@
 // let num1 = 7
 // let num2 = '7'
 
-// console.log(num1 == num2)
-// console.log(num1 === num2)
+//  console.log(num1 == num2)  // true 
+//  console.log(num1 === num2) // false
 
 // let bool1 = true
 // let bool2 = 'true' 
 
-// console.log(bool1 == bool2)
-// console.log(bool1 === bool2)
+// console.log(bool1 == bool2)  // false
+// console.log(bool1 === bool2) // false
 
 // let isReady = true
 
@@ -84,7 +84,7 @@
 
 // console.log("true && 'true'")
 // console.log(true && 'true')
- 
+
 // console.log("'dog' && 'cat'")
 // console.log('dog' && 'cat')
 
@@ -113,6 +113,7 @@
 // 7. Arrays
 
 // let operationSystems = ['Mac', 'Windows', 'Ubuntu']
+// console.log(typeof operationSystems)
 // console.log(operationSystems)
 // console.log(operationSystems.length)
 // console.log(operationSystems[2])
@@ -138,15 +139,16 @@
 // console.log(person)
 
 // const vova = {
-//	name: 'Vova', 
-//	age: 32, 
-//	languages: ['Ru', 'By', 'Eng', 'Esp'], 
-//	hasWife: true, 
-//	hello: function(){
+//	name: 'Vova',
+//	age: 32,
+//	languages: ['Ru', 'By', 'Eng', 'Esp'],
+//	hasWife: true,
+//	hello: function() {
 //		console.log('Hello')
 //	}
 //}
 
+// console.log(typeof vova)
 // console.log(vova)
 // console.log(vova.name)
 // console.log(vova['age'])
@@ -258,16 +260,239 @@
 
 // 14. New sintaxis
 
-function newSintax(s, name, age){
-	console.log(s)
-	console.log(name)
-	console.log(age)
-}
+// function newSintax(s, name, age){
+//	console.log(s)
+//	console.log(name)
+//	console.log(age)
+// }
 
-const name = 'Vova'
-const age = 32
+// const name = 'Vova'
+// const age = 32
 
-newSintax`Hello, my name is ${name}, I am ${age} years old`
+// newSintax`Hello, my name is ${name}, I am ${age} years old`
+
+// 15.Function
+
+// Function declaration
+// greet('Vova')
+// function greet(name){
+//	console.log('Hello, I am - ', name)
+// }
+
+// Function declaration
+// greet2() - error
+// const greet2 = function(){
+//	console.log('Hello')
+// }
+// greet2()
+
+// greet3() - error 
+// const greet3 = function greet3(){
+//	console.log('Hello')
+// }
+// greet3()
+
+// let counter = 0
+// const interval = setInterval(function() {
+// 	if (counter === 5) {
+//		clearInterval(interval)
+//	} else {
+//		console.log(++counter)
+//	}
+// }, 1000)
+
+// 16. Arrow functions
+
+// function greet(name) {
+//	console.log('Hello - ', name)
+//}
+
+//const arrow = (name) => {
+//	console.log(`Hello - ${name}`)
+//}
+
+//const arrow2 = name => console.log(`Hello - ${name}`)
+
+//arrow('Vova')
+//arrow2('Vova2')
+
+//const pow2 = num => num * num
+
+//console.log(pow2(5))
+
+// 17. Default values in functions
+
+// const sum = (a, b = 1) => a + b
+
+// console.log(sum(41,1))
+// console.log(sum(41))
+
+//function sumAll(...all) {
+//	console.log(all)
+//	console.log(typeof all)
+//	let result = 0
+//	for (let num of all) {
+//		result += num
+//	}
+//	return result
+//}
+
+// const res = sumAll(1, 2, 3, 4, 5, 6, 7)
+
+//console.log(res)
+
+// 18. Zamikania
+
+// function createMember(name){
+// 	return function(lastName){
+//		console.log(name + lastName)
+//	}
+//}
+
+// const logWithLastName = createMember('Vova')
+// console.log(logWithLastName)
+
+//logWithLastName('Dub')
+
+// 19. Arrays
+
+const cars = ['Mazda', 'Ford', 'BMV', 'Mercedes']
+const fib = [1, 1, 2, 3, 5, true, 'hello']
+
+console.log(cars)
+
+const array = new Array(5, 2)
+console.log(array)
+
+cars.push('Tesla')
+cars.unshift('Volga')
+
+console.log(cars)
+const firstItem = cars.shift()
+console.log(cars)
+console.log(firstItem)
+
+const lastItem = cars.pop()
+console.log(cars)
+console.log(lastItem)
+
+console.log(cars.reverse())
+console.log(cars)
+
+const text = 'Hello, we are learning javascript'
+const reverseText = text.split('').reverse().join('')
+console.log(reverseText)
+
+const mazdaIndex = cars.indexOf('Mazda')
+cars[mazdaIndex] = 'NeMazda'
+console.log(cars)
+
+const people = [{ name: 'Vova', money: 4200 }, { name: 'Ivan', money: 3500 }, { name: 'Alexandra', money: 1800 }]
+const vovaIndex = people.findIndex(person => person.name === 'Vova')
+const vova = people.find(person => person.name === 'Vova')
+
+console.log(vovaIndex)
+
+console.log(cars.includes('Ford'))
+
+const vovaIndex2 = people.findIndex(person => person.name === '2Vova') // return -1
+const vova2 = people.find(person => person.name === 'V2ova') // return undefined
+
+console.log(vovaIndex2)
+console.log(vova2)
+
+const operationSystems = ['Ubuntu', 'Windows', 'Mac']
+const upperCaseOperationSystems = operationSystems.map(os => os.toUpperCase())
+console.log(upperCaseOperationSystems)
+
+fib.pop()
+fib.pop()
+
+console.log(fib)
+
+const quadFib = fib.map(num => num ** 2)
+
+console.log(quadFib)
+
+let seq = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+seq.map(num => num ** 2) // doesn't change original'
+console.log(seq)
+
+const sqrtSeq = seq.map(Math.sqrt)
+
+console.log(sqrtSeq)
+
+const powSeq = seq.map(num => Math.pow(num, 2))
+console.log(powSeq)
+
+const filterPowSeq = powSeq.filter(function(num) {
+	return num > 20
+})
+
+console.log(filterPowSeq)
+
+const babki = people.reduce(function(acc, person) {
+	if (person.money > 2000) {
+		acc += person.money
+	}
+	return acc
+}, 0)
+
+
+
+console.log(babki)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
