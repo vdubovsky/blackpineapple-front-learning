@@ -356,91 +356,261 @@
 
 // 19. Arrays
 
-const cars = ['Mazda', 'Ford', 'BMV', 'Mercedes']
-const fib = [1, 1, 2, 3, 5, true, 'hello']
+// const cars = ['Mazda', 'Ford', 'BMV', 'Mercedes']
+// const fib = [1, 1, 2, 3, 5, true, 'hello']
 
-console.log(cars)
+// console.log(cars)
 
-const array = new Array(5, 2)
-console.log(array)
+// const array = new Array(5, 2)
+// console.log(array)
 
-cars.push('Tesla')
-cars.unshift('Volga')
+// cars.push('Tesla')
+// cars.unshift('Volga')
 
-console.log(cars)
-const firstItem = cars.shift()
-console.log(cars)
-console.log(firstItem)
+// console.log(cars)
+// const firstItem = cars.shift()
+// console.log(cars)
+// console.log(firstItem)
 
-const lastItem = cars.pop()
-console.log(cars)
-console.log(lastItem)
+// const lastItem = cars.pop()
+// console.log(cars)
+// console.log(lastItem)
 
-console.log(cars.reverse())
-console.log(cars)
+// console.log(cars.reverse())
+// console.log(cars)
 
-const text = 'Hello, we are learning javascript'
-const reverseText = text.split('').reverse().join('')
-console.log(reverseText)
+// const text = 'Hello, we are learning javascript'
+// const reverseText = text.split('').reverse().join('')
+// console.log(reverseText)
 
-const mazdaIndex = cars.indexOf('Mazda')
-cars[mazdaIndex] = 'NeMazda'
-console.log(cars)
+//const mazdaIndex = cars.indexOf('Mazda')
+//cars[mazdaIndex] = 'NeMazda'
+//console.log(cars)
 
-const people = [{ name: 'Vova', money: 4200 }, { name: 'Ivan', money: 3500 }, { name: 'Alexandra', money: 1800 }]
-const vovaIndex = people.findIndex(person => person.name === 'Vova')
-const vova = people.find(person => person.name === 'Vova')
+//const people = [{ name: 'Vova', money: 4200 }, { name: 'Ivan', money: 3500 }, { name: 'Alexandra', money: 1800 }]
+//const vovaIndex = people.findIndex(person => person.name === 'Vova')
+//const vova = people.find(person => person.name === 'Vova')
 
-console.log(vovaIndex)
+//console.log(vovaIndex)
 
-console.log(cars.includes('Ford'))
+//console.log(cars.includes('Ford'))
 
-const vovaIndex2 = people.findIndex(person => person.name === '2Vova') // return -1
-const vova2 = people.find(person => person.name === 'V2ova') // return undefined
+//const vovaIndex2 = people.findIndex(person => person.name === '2Vova') // return -1
+//const vova2 = people.find(person => person.name === 'V2ova') // return undefined
 
-console.log(vovaIndex2)
-console.log(vova2)
+//console.log(vovaIndex2)
+//console.log(vova2)
 
-const operationSystems = ['Ubuntu', 'Windows', 'Mac']
-const upperCaseOperationSystems = operationSystems.map(os => os.toUpperCase())
-console.log(upperCaseOperationSystems)
+//const operationSystems = ['Ubuntu', 'Windows', 'Mac']
+//const upperCaseOperationSystems = operationSystems.map(os => os.toUpperCase())
+//console.log(upperCaseOperationSystems)
 
-fib.pop()
-fib.pop()
+//fib.pop()
+//fib.pop()
 
-console.log(fib)
+//console.log(fib)
 
-const quadFib = fib.map(num => num ** 2)
+//const quadFib = fib.map(num => num ** 2)
 
-console.log(quadFib)
+//console.log(quadFib)
 
-let seq = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-seq.map(num => num ** 2) // doesn't change original'
-console.log(seq)
+//let seq = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+//seq.map(num => num ** 2) // doesn't change original'
+//console.log(seq)
 
-const sqrtSeq = seq.map(Math.sqrt)
+//const sqrtSeq = seq.map(Math.sqrt)
 
-console.log(sqrtSeq)
+//console.log(sqrtSeq)
 
-const powSeq = seq.map(num => Math.pow(num, 2))
-console.log(powSeq)
+//const powSeq = seq.map(num => Math.pow(num, 2))
+//console.log(powSeq)
 
-const filterPowSeq = powSeq.filter(function(num) {
-	return num > 20
-})
+//const filterPowSeq = powSeq.filter(function(num) {
+//	return num > 20
+//})
 
-console.log(filterPowSeq)
+//console.log(filterPowSeq)
 
-const babki = people.reduce(function(acc, person) {
-	if (person.money > 2000) {
-		acc += person.money
-	}
-	return acc
-}, 0)
+//const babki = people.reduce(function(acc, person) {
+//	if (person.money > 2000) {
+//		acc += person.money
+//	}
+//	return acc
+//}, 0)
 
 
 
-console.log(babki)
+//console.log(babki)
+
+
+// 20. Objects
+
+//const person = {
+//	name: 'Vova',
+//	age: 33,
+//	isProgrammer: true,
+//	languages: ['Ru', 'By', 'En', 'Esp'],
+//	greet: function() {
+//		console.log('Hello!')
+//	},
+//	newSintaxGreet() {
+//		console.log('Hello!')
+//	},
+//	'complex key': 'complex value',
+//	[1 + 3]: 'Computed key'
+//}
+
+// const ageKey = 'age'
+// console.log(person[ageKey])
+// console.log['complex key']
+
+//person.age++
+//person.languages.push('Fr')
+//console.log(person)
+
+//delete person['complex key']
+
+//console.log(person)
+
+//const { age, name: personName, isProgrammer = false } = person
+
+//console.log(age, personName, isProgrammer)
+
+//for (let key in person) {
+//	if (person.hasOwnProperty(key)) {
+//		console.log(key)
+//		console.log(person[key])
+//	}
+
+//}
+
+//const keys = Object.keys(person)
+//console.log(keys)
+//keys.forEach(key => console.log(key))
+//keys.forEach(console.log)
+
+// 21. Context
+
+//const person = {
+//	name: 'Vova',
+//	age: 33,
+//	lang: ['Ru', 'Eng', 'By', 'Esp'],
+//	greet() {
+//		console.log('Hello')
+//	},
+//	info() {
+//		console.log('Information about person: ', person.name)
+//	},
+//	infoThis() {
+//		console.log(this)
+//		console.log('Information about person: ', this.name)
+//	}
+//}
+
+// person.info()
+// person.infoThis()
+
+//const logger = {
+//	keys(obj) {
+//		console.log('Object keys: ', Object.keys(obj))
+//	}
+//}
+
+//logger.keys(person)
+
+
+
+//const logger2 = {
+//	keys() {
+//		console.log('Object keys: ', Object.keys(this))
+//	}
+//}
+
+//logger2.keys(person)
+
+//const bound = logger2.keys.bind(person)
+
+//bound()
+
+//logger2.keys.call(person) // execute method
+
+
+//const logger3 = {
+//	keysAndValues() {
+//		Object.keys(this).forEach(k => {
+//			console.log(`"${k}": ${this[k]}`)
+//		})
+//	}
+//}
+
+//logger3.keysAndValues()
+
+//logger3.keysAndValues.call(person)
+
+//logger3.keysAndValues.call({ a: 1, c: [], d: true })
+
+//const logger4 = {
+//	contextSurprise() {
+//		Object.keys(this).forEach(function(key) {
+//			console.log(`${key} : ${this[key]}`)
+//		}.bind(this))
+//	}
+//}
+
+//const logger5 = {
+//	contextSurprise() {
+//		const self = this
+//		Object.keys(this).forEach(function(key) {
+//			console.log(`${key} : ${self[key]}`)
+//		}.bind(this))
+//	}
+//}
+
+//logger4.contextSurprise.call(person)
+//logger5.contextSurprise.call(person)
+
+
+//const logger6 = {
+//	withParams(param1 = true, param2 = 'hello') {
+//		console.log(param1)
+//		console.log(param2)
+//		console.log(this)
+//	}
+
+// }
+
+// logger6.withParams.call(person, false)
+// logger6.withParams.apply(person, [false, false])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
