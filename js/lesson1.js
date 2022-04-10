@@ -582,6 +582,90 @@
 // logger6.withParams.call(person, false)
 // logger6.withParams.apply(person, [false, false])
 
+// 22. Async
+
+//const timeout = setTimeout(() => {
+//	console.log('After timeout')
+//}, 1000)
+
+//clearTimeout(timeout)
+
+//const interval = setInterval(() => {
+//	console.log('Interval')
+//}, 1000)
+
+//clearInterval(interval)
+
+//const delay = (callback, wait = 1000) => {
+//	setTimeout(callback, wait)
+//}
+
+//delay(() => console.log('Hello'))
+
+//const promiseDelay = (wait = 1000) => {
+//	return new Promise((resolve, reject) => {
+//		setTimeout(() => {
+//			resolve()
+//			//reject('Error has happend')
+//		}, wait)
+//	})
+//}
+
+//promiseDelay(2500)
+//	.then(() => {
+//		console.log('After 2 sec')
+//	})
+//	.catch(err => console.error(err))
+//	.finally(() => console.log('finally!'))
+
+
+//const getData = () => new Promise(resolve => resolve([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+//getData().then(data => console.log(data))
+
+//async function asyncExample() {
+//	try {
+//		await promiseDelay(3000)
+//		const data = await getData()
+//		console.log(data)
+//	} catch (e) {
+//		console.log(e)
+//	} finally {
+//		console.log('finally')
+//	}
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
