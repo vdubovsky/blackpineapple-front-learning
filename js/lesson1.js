@@ -634,6 +634,122 @@
 //	}
 //}
 
+// 23. DOM
+
+//console.log(document)
+//console.log(window)
+//const res = window.confirm('Accept the action!')
+//console.log(res)
+//window.console.log('Window')
+
+const heading = document.getElementById('hello')
+//console.log(heading)
+//console.dir(heading)
+//console.log(heading.textContent)
+
+let i = 0
+setTimeout(() => {
+	addStylesTo(heading)
+}, 3000)
+
+function addStylesTo(node) {
+	node.textContent = 'Hello'
+	node.style.color = 'red'
+	node.style.textAlign = 'center'
+	node.style.backgroundColor = 'black'
+	node.style.padding = '2rem'
+}
+
+const heading2ByTag = document.getElementsByTagName('h2')[0] // it is better not to use
+const heading2ByClass = document.getElementsByClassName('h2-class')[0]
+
+//console.log(heading2ByClass) 
+
+const goodWay1 = document.querySelector('h2')
+const goodWay2 = document.querySelector('.h2-class')
+const goodWay3 = document.querySelector('#h2-id')
+
+//console.log(goodWay1) 
+//console.log(goodWay2) 
+//console.log(goodWay3) 
+
+goodWay1.nextElementSibling.textContent = 'ChangedByNextSiblingMethod'
+
+//const h2List = document.querySelectorAll('h2')
+
+// console.log(h2List)
+
+function addSmartStylesTo(node, text, color = 'red', fontSize) {
+	node.textContent = text
+	node.style.color = color
+	node.style.textAlign = 'center'
+	node.style.backgroundColor = 'black'
+
+	// falsy: '', undefined, null, 0, fasle
+	if (fontSize) {
+		node.style.fontsize = fontSize
+	}
+}
+
+heading.onclick = () => {
+	console.log('Hello')
+}
+
+goodWay1.addEventListener('dblclick', () => {
+	console.log("Good")
+})
+
+const h3h3 = document.querySelector('h3')
+
+addStylesTo(h3h3.querySelector('a'))
+
+h3h3.addEventListener('click', (event)=>{
+	event.preventDefault()
+	console.log(event.target.getAttribute('href'))
+	const url = 'http://dev.by'
+	location = url
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
